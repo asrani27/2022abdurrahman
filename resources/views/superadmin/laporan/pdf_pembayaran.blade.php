@@ -111,10 +111,10 @@
                 <tr>
                     <td>{{$no++}}</td>
                     <td>{{$item->nomor}}</td>
-                    <td>{{$item->sppd->nomor}}</td>
+                    <td>{{$item->sppd == null ? '-': $item->sppd->nomor}}</td>
                     <td>{{number_format($item->jumlah)}}</td>
-                    <td>{{$item->bendahara->nip}}</td>
-                    <td>{{$item->pegawai->nip}}</td>
+                    <td>{{$item->bendahara == null ? '-': $item->bendahara->nip}}</td>
+                    <td>{{$item->pegawai == null ? '-': $item->pegawai->nip}}</td>
                 </tr>
                 @endforeach
 

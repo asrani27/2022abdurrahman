@@ -34,10 +34,10 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$item->nomor}}</td>
-                            <td>{{$item->sppd->nomor}}</td>
+                            <td>{{$item->sppd == null ? '-': $item->sppd->nomor}}</td>
                             <td>{{number_format($item->jumlah)}}</td>
-                            <td>{{$item->bendahara->nama}}</td>
-                            <td>{{$item->pegawai->nama}}</td>
+                            <td>{{$item->bendahara == null ? '-': $item->bendahara->nama}}</td>
+                            <td>{{$item->pegawai == null ? '-': $item->pegawai->nama}}</td>
                             <td>
                                 <a href="/m/pembayaran/edit/{{$item->id}}" class="btn btn-sm btn-success">Edit</a>
                                 <a href="/m/pembayaran/delete/{{$item->id}}" class="btn btn-sm btn-danger"

@@ -41,9 +41,9 @@
                             <td>{{$item->tgl}}</td>
                             <td>{{$item->tujuan}}</td>
                             <td>{{$item->kegiatan}}</td>
-                            <td>{{$item->biaya->kode}}</td>
-                            <td>{{$item->skpd->kode}}</td>
-                            <td>{{$item->pegawai->nip}}</td>
+                            <td>{{$item->biaya == null ? '-': $item->biaya->kode}}</td>
+                            <td>{{$item->skpd == null ? '-': $item->skpd->kode}}</td>
+                            <td>{{$item->pegawai == null ? '-': $item->pegawai->nip}}</td>
                             <td>
                                 <a href="/m/spt/edit/{{$item->id}}" class="btn btn-sm btn-success">Edit</a>
                                 <a href="/m/spt/delete/{{$item->id}}" class="btn btn-sm btn-danger"

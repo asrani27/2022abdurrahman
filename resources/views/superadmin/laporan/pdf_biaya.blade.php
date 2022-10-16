@@ -113,7 +113,7 @@
                     <td>{{$no++}}</td>
                     <td>{{$item->kode}}</td>
                     <td>{{$item->nama}}</td>
-                    <td>{{$item->jabatan->nama}}</td>
+                    <td>{{$item->jabatan == null ? '-': $item->jabatan->nama}}</td>
                     <td>{{number_format($item->b_harian)}}</td>
                     <td>{{number_format($item->b_perjalanan)}}</td>
                     <td>{{number_format($item->b_dinas)}}</td>

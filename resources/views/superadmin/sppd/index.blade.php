@@ -37,10 +37,10 @@
                             <td>{{$no++}}</td>
                             <td>{{$item->nomor}}</td>
                             <td>{{$item->tgl}}</td>
-                            <td>{{$item->spt->kode_spt}}</td>
-                            <td>{{$item->biaya->kode}}</td>
+                            <td>{{$item->spt == null ? '-': $item->spt->kode_spt}}</td>
+                            <td>{{$item->biaya == null ? '-': $item->biaya->kode}}</td>
                             <td>{{$item->jumlah}}</td>
-                            <td>{{$item->sekda->nip}}</td>
+                            <td>{{$item->sekda == null ? '-': $item->sekda->nip}}</td>
                             <td>{{$item->status}}</td>
                             <td>
                                 <a href="/m/sppd/edit/{{$item->id}}" class="btn btn-sm btn-success">Edit</a>

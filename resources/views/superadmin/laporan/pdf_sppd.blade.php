@@ -114,10 +114,10 @@
                     <td>{{$no++}}</td>
                     <td>{{$item->nomor}}</td>
                     <td>{{$item->tgl}}</td>
-                    <td>{{$item->spt->kode_spt}}</td>
-                    <td>{{$item->biaya->kode}}</td>
+                    <td>{{$item->spt == null ? '-': $item->spt->kode_spt}}</td>
+                    <td>{{$item->biaya == null ? '-': $item->biaya->kode}}</td>
                     <td>{{number_format($item->jumlah)}}</td>
-                    <td>{{$item->sekda->nip}}</td>
+                    <td>{{$item->sekda == null ? '-': $item->sekda->nip}}</td>
                     <td>{{$item->status}}</td>
                 </tr>
                 @endforeach
